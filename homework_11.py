@@ -14,13 +14,14 @@ official_name = country["name"]["official"]
 capital = country.get("capital")[0]
 flag = country.get("flag", "")
 population = country.get("population")
+population_formatted = f"{population:,}".replace(",", " ")
 lat, lng = country["latlng"]
 
 print("\n*** ІНФОРМАЦІЯ ПРО КРАЇНУ ***")
 print(f"Офіційна назва: [{official_name}]")
 print(f"Столиця: [{capital}]")
 print(f"Прапор: {flag}")
-print(f"Населення: [{population}]")
+print(f"Населення: [{population_formatted}]")
 print(f"Географічне положення: [{official_name}] розташована приблизно на широті [{lat}] та довготі [{lng}].")
 
 
